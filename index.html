@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yannis Game Library</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('wallpaper.jpg') center/cover no-repeat fixed; /* Added fixed to the background */
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            padding: 40px;
+            background: rgba(20, 30, 48, 0.9); /* Darkened, semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Logo in the top left */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Header */
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 0.5em;
+            color: #ffcc33;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+
+        /* Main Button */
+        .main-button .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background: #e94560;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .main-button .btn:hover {
+            background: #ff5978;
+        }
+
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 2em;
+        }
+
+        /* Game Card */
+        .game-card {
+            background: #1e2a38;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .game-card h3 {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+            color: #ffcc33;
+        }
+
+        .game-card p {
+            font-size: 0.9em;
+            margin-bottom: 1em;
+        }
+
+        .try-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e94560;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .try-button:hover {
+            background: #ff5978;
+        }
+
+        /* Back to Home Button */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4a90e2; /* Blue color */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            font-size: 1em;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #357ABD; /* Darker blue on hover */
+        }
+
+        /* Page Transition */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo in top-left corner -->
+        <div class="logo">
+            <!-- Add your logo image here -->
+        </div>
+
+        <!-- Landing Page -->
+        <div id="landing-page">
+            <header>
+                <h1>Welcome to Yannis Game Library</h1>
+                <p>Dive into my Godot game collection and enjoy the awesome adventure!</p>
+                <p>ALL GAMES ARE FREE SO ENJOY!!!</p>
+            </header>
+            <div class="main-button">
+                <a href="#" class="btn" onclick="showPage('games-page')">Try Out Games</a>
+            </div>
+        </div>
+
+        <!-- Games Page -->
+        <div id="games-page" class="hidden">
+            <header>
+                <h1>Game Library</h1>
+                <p>Select a game below to start playing!</p>
+            </header>
+            <div class="games-grid">
+                <!-- Game Slots -->
+                <div class="game-card">
+                    <img src="game1.png" alt="Game 1">
+                    <h3>Yannis RPG</h3>
+                    <p>Embark on an epic RPG adventure inside of a castle where you have to defeat enemies, rank up levels, unlock swords and abilities, and survive for as long as you can!</p>
+                    <a href="Yannis RPG.dmg" download class="try-button">Download</a>
+                    <br><br> <!-- Adds some spacing between the buttons -->
+                    <a href="Yannis RPG.html" class="try-button" target="_blank">Play Online</a>
+                </div>                
+                <div class="game-card">
+                    <img src="game2.png" alt="Game 2">
+                    <h3>Mossy Lands Platformer</h3>
+                    <p>A platformer where you have to escape enemies, unlock new types of magic, do impossible jumps, and MUCH MORE!</p>
+                    <a href="Mossy Lands Platformer.dmg" class="try-button">Download</a>
+                    <br><br> <!-- Adds some spacing between the buttons -->
+                    <a href="Mossy Lands.html" class="try-button" target="_blank">Play Online</a>
+                </div>
+                <div class="game-card">
+                    <img src="game3.png" alt="Game 3">
+                    <h3>3D FPS Game (Online Shooter)</h3>
+                    <p>Short description of the game.</p>
+                    <a href="Online Shooter.dmg" class="try-button">Download</a>
+                    <br><br> <!-- Adds some spacing between the buttons -->
+                    <a href="Yannis RPG.html" class="try-button" target="_blank">Play Online</a>
+                </div>
+                <div class="game-card">
+                    <img src="game4.png" alt="Game 4">
+                    <h3>Pixel Dash</h3>
+                    <p>A pixel platformer where you jump through obstacles, collect fruits, and run over enemies. And so much more! Note that this game is still in progress and this is just a demo.</p>
+                    <a href="Pixel Dash.dmg" class="try-button">Download</a>
+                    <br><br> <!-- Adds some spacing between the buttons -->
+                    <a href="Pixel Dash.html" class="try-button" target="_blank">Play Online</a>
+                </div>
+                <div class="game-card">
+                    <img src="game5.png" alt="Game 5">
+                    <h3>Shooter Survivors</h3>
+                    <p>Its a 3D FPS Shooter Training Battleground where you can train your aim shoot enemis and level up your guns(NOTE: New update coming soon)</p>
+                    <a href="Shooter Survivors.dmg" class="try-button">Download</a><br><br> <!-- Adds some spacing between the buttons -->
+                    <a href="Yannis RPG.html" class="try-button" target="_blank">Play Online</a>
+                </div>
+                <div class="game-card">
+                    <img src="game6.png" alt="Game 6">
+                    <h3>Fofinho 2D RPG</h3>
+                    <p>This game is stil work in progress</p>
+                    <a href="#" class="try-button">Unavailable</a>
+                    <br><br> <!-- Adds some spacing between the buttons -->
+                    <a href= "#" class="try-button" target="_blank"> Unavailable</a>
+                </div>
+                
+            </div>
+            <button onclick="showPage('landing-page')" class="back-button">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.getElementById('landing-page').classList.add('hidden');
+            document.getElementById('games-page').classList.add('hidden');
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
