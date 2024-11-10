@@ -1,1 +1,1 @@
-# hhsdb.github.io
+https://yanniflohr.github.io/yannis-game-library/#
